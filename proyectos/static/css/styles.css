@@ -1,0 +1,244 @@
+/* ----------------------------------------- */
+/* COLORES BASE */
+/* ----------------------------------------- */
+:root {
+    --menta: #A8E6CF;        /* verde menta claro */
+    --turquesa: #88D8C0;     /* turquesa pastel */
+    --rosa: #FFDDD2;         /* rosado pastel */
+    --gris-claro: #f2f2f2;
+}
+
+/* ----------------------------------------- */
+/* GLOBAL / NAVBAR / FOOTER */
+/* ----------------------------------------- */
+
+/* Fondo menta global */
+.bg-menta {
+    background-color: var(--menta);
+}
+
+/* Navbar al hacer scroll */
+nav.navbar.navbar-scroll {
+    background-color: var(--turquesa);
+    transition: 0.3s ease-in-out;
+}
+
+/* Links del navbar */
+nav.navbar .nav-link {
+    color: #004d40;
+    font-weight: 500;
+}
+
+nav.navbar .nav-link:hover {
+    color: var(--rosa);
+}
+
+/* Footer links */
+#footer .footer-link {
+    color: #004d40;
+    text-decoration: none;
+}
+
+#footer .footer-link:hover {
+    color: var(--rosa);
+}
+
+/* Texto general */
+.text-menta {
+    color: #00897b;
+}
+
+/* Imagen del perfil */
+.perfil-img {
+    max-width: 260px;
+    border: 6px solid var(--turquesa);
+    border-radius: 50%;
+}
+
+/* ----------------------------------------- */
+/* RESPONSIVO / ADAPTACIONES */
+/* ----------------------------------------- */
+@media(max-width: 576px) {
+    .perfil-img {
+        margin-top: 20px;
+    }
+}
+
+/* ----------------------------------------- */
+/* HABILIDADES */
+/* ----------------------------------------- */
+
+/* Scroll horizontal */
+.habilidades-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px;
+}
+
+/* Card de habilidad */
+.habilidad-card {
+    display: inline-block;
+    min-width: 220px;
+    border-radius: 12px;
+    border: 1px solid var(--gris-claro);
+    padding: 15px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* Íconos grandes */
+.icon-skill {
+    font-size: 3rem;
+    color: #00897b;
+}
+
+.icon-img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Barra de progreso pastel */
+.progress .bg-menta-bar {
+    background-color: var(--menta);
+    color: #004d40;
+    font-weight: 600;
+    transition: width 0.6s ease;
+}
+
+/* ----------------------------------------- */
+/* PROYECTOS */
+/* ----------------------------------------- */
+.proyecto-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gris-claro);
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.proyecto-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.proyecto-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+/* Botones proyectos */
+.btn-menta {
+    background-color: var(--turquesa);
+    color: #004d40;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-menta:hover {
+    background-color: var(--rosa);
+    color: #000;
+}
+
+/* ----------------------------------------- */
+/* CONTACTO */
+/* ----------------------------------------- */
+.contacto-card {
+    background-color: var(--gris-claro);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Botón turquesa */
+.btn-turquesa {
+    background-color: var(--turquesa);
+    color: #004d40;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-turquesa:hover {
+    background-color: var(--rosa);
+    color: #000;
+}
+
+/* Íconos redes sociales */
+.red-social i {
+    font-size: 2rem;
+    color: var(--turquesa);
+    transition: 0.2s;
+}
+
+.red-social i:hover {
+    color: var(--rosa);
+}
+
+/* Inputs contacto */
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    border-color: var(--turquesa);
+    box-shadow: 0 0 5px var(--turquesa);
+}
+
+/* ----------------------------------------- */
+/* BOTONES GENERALES */
+/* ----------------------------------------- */
+.btn {
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* ----------------------------------------- */
+/* EFECTOS ADICIONALES / NAVBAR SCROLL */
+/* ----------------------------------------- */
+.navbar-scroll {
+    /* color aplicado al navbar al hacer scroll */
+    transition: 0.3s ease-in-out;
+}
+
+/* ----------------------------------------- */
+/* PERFIL / CARDS / TARJETAS EN GENERAL */
+/* ----------------------------------------- */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------- */
+/* LINKS GENERALES */
+/* ----------------------------------------- */
+a {
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ----------------------------------------- */
+/* JS */
+/* ----------------------------------------- */
+
+/* Mensaje de bienvenida como overlay */
+.welcome-message {
+    background-color: #c8f0e8;
+    color: #2a7a64;
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 1;
+    transition: opacity 2s;
+    z-index: 1050; /* encima de todo */
+}
+
+/* Posición fija arriba */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
