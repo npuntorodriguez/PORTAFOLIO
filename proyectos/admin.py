@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Habilidad
+from .models import Proyecto
 
-# Register your models here.
+admin.site.register(Habilidad)
+admin.site.register(Proyecto)
