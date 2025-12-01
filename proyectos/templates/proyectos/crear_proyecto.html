@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Crear Proyecto{% endblock %}
+
+{% block content %}
+<main class="container py-5" style="max-width: 700px;">
+
+    <h2 class="text-center text-menta fw-bold mb-4">Crear Nuevo Proyecto</h2>
+
+    <div class="card p-4 shadow contacto-card">
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button class="btn btn-turquesa w-100 mt-3">Guardar Proyecto</button>
+        </form>
+
+    </div>
+
+</main>
+{% endblock %}
