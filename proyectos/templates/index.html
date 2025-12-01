@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex align-items-center" style="min-height: 70vh;">
+    <div class="row align-items-center w-100">
+
+        <!-- Columna Izquierda -->
+        <div class="col-md-7 mb-4 mb-md-0">
+            <h1 class="fw-bold text-menta mb-3">
+                Natalia Rodríguez Escárate
+            </h1>
+
+            <p class="lead text-secondary">
+                Me interesa la naturaleza, los datos científicos y la música como elemento inspirador.
+                También tengo interés en la neurociencia y en métodos educativos para niños con altas
+                capacidades, TDAH o autismo. Mi principal motivación es aprender constantemente y explorar
+                nuevos horizontes en este camino de crecimiento.
+            </p>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="col-md-5 text-center">
+            <img src="{% static 'img/perfil_natalia.jpg' %}" alt="Foto de Natalia" class="img-fluid rounded-circle shadow-lg perfil-img">
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

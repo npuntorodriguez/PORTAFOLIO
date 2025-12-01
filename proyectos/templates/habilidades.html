@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Habilidades{% endblock %}
+
+{% block content %}
+<main class="container py-5 flex-grow-1">
+
+    <h2 class="text-center text-menta fw-bold mb-4">Mis Habilidades</h2>
+
+    <div class="habilidades-scroll d-flex gap-4 pb-3">
+
+        {% for h in habilidades %}
+        <div class="habilidad-card card shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-braces icon-skill"></i>
+                <h5 class="fw-bold mt-3">{{ h.nombre }}</h5>
+
+                <div class="progress mt-3">
+                    <div class="progress-bar bg-menta-bar" 
+                         style="width: {{ h.experiencia|default:0 }}%;">
+                        {{ h.experiencia|default:0 }}%
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</main>
+{% endblock %}

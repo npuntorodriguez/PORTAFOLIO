@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+<main class="container py-5 flex-grow-1">
+
+    <h2 class="text-center text-menta fw-bold mb-4">Conecta Conmigo</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow contacto-card p-4">
+                <form id="formContacto" method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" name="nombre" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Mensaje</label>
+                        <textarea name="mensaje" class="form-control" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-turquesa w-100">Enviar</button>
+                </form>
+
+                <div class="text-center mt-4">
+                    <a href="https://www.linkedin.com/in/natalia-soledad-rodriguez-escarate/" target="_blank" class="red-social mx-3">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/npuntorodriguez" target="_blank" class="red-social mx-3">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</main>
+{% endblock %}
